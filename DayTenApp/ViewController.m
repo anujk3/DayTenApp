@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "MySingleton.h"
 
 @interface ViewController ()
 
@@ -26,12 +27,16 @@
 }
 
 - (IBAction)tappedSaveData:(id)sender {
-    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
-    [delegate doSomethingWithString:@"Some Text"];
+//    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+//    [delegate doSomethingWithString:@"Some Text"];
+    MySingleton* singleton = [MySingleton getInstance];
+    [singleton doSomethingWithString:@"some text"];
 }
 
 - (IBAction)tappedFetchData:(id)sender {
-    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
-    [self.lblInfo setText:[delegate getInfo]];
+//    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+//    [self.lblInfo setText:[delegate getInfo]];
+    MySingleton* singleton = [MySingleton getInstance];
+    [self.lblInfo setText:[singleton getInfo]];
 }
 @end

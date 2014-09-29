@@ -16,7 +16,7 @@
 
 @implementation MySingleton
 
-static MySingleton *singletonInstance;
+static MySingleton *singletonInstance; // why use the word static, keeps the scope of this variable limited to this file only like in C
 
 + (MySingleton *)getInstance{
     if (singletonInstance == nil){

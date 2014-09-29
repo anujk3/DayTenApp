@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)tappedSaveData:(id)sender;
+- (IBAction)tappedFetchData:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *lblInfo;
 
 @end
 

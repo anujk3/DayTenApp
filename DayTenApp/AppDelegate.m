@@ -42,4 +42,12 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (NSString *)getInfo{
+    return self.info;
+}
+
+- (void)doSomethingWithString:(NSString *)parameter{
+    self.info = parameter;
+}
+
 @end
